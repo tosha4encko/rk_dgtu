@@ -1,0 +1,29 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" name="rk dgtu" content="regby, dgtu, rk dgtu, регби дгту, рк дгту, регбийный клуб дгту, регби ростов"/>
+        <title>Регбийный клуб ДГТУ</title>
+        <meta name="yandex-verification" content="53bc61c7ec40e932" />
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css"/>
+        <link rel="shortcut icon" href="{% media images/ball.jpeg}">
+    </head>
+    {% include 'polls/include/menu.html' %}
+    {% if albom.photo_set.all %}
+        {% for photo in albom.photo_set.all %}
+            <div class="content">
+                <span class="photo_content">
+                    <a rel="simplebox" href="{{photo.photo.url}}">
+                        <img src="{{photo.photo.url}}" width="150">
+                    </a>
+                </span>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No news are available.</p>
+    {% endif %}
+    <li>
+        {% include 'polls/include/events.html' %}
+    </li>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" name="rk dgtu" content="regby, dgtu, rk dgtu, регби дгту, рк дгту, регбийный клуб дгту, регби ростов"/>
+        <title>Регбийный клуб ДГТУ</title>
+        <meta name="yandex-verification" content="53bc61c7ec40e932" />
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css"/>
+        <link rel="shortcut icon" href="{% media images/ball.jpeg}">
+    </head>
+    {% include 'polls/include/menu.html' %}
+    {% if news %}
+        {% for new in news %}
+            <span class="center_content">
+				<div class="ck">
+					<h2> {{new.title}} </h2>
+					<h3 class="data"> {{new.pub_date}}</h3>
+					<img border="0" src={{new.photo.url}} width="700">
+                     {% for p in new.pararaph_set.all %}
+                        <p> {{p.text}} <p>
+                     {% endfor %}
+					<a href="https://rugger.info/news/15049"> {{new.source}}</a>
+				</div>
+			</span>
+        {% endfor %}
+    {% else %}
+        <p>No news are available.</p>
+    {% endif %}
+    <li>
+        {% include 'polls/include/events.html' %}
+    </li>
+</html>
