@@ -1,0 +1,34 @@
+{% load static %}
+{% for event in events %}
+    {% if event.was_date_published %}
+        <h3> Последний матч </h3>
+    {% else &}
+        <h3> Ближайший матч </h3>
+    {% endif %}
+     <div class="card rounded-0 text-center p-0" style="background: #ccc;">
+        <h4 class="card-header" style="font-weight: bold; background: #aaa;">Последний матч</h4>
+        <h6 class="card-title mt-2">
+            {{event.real_data}}<br/>
+            {{event.location}}<br/>
+            <b>{{event.ev}}</b><br/>
+        </h6>
+        <div class="container my-6 pb-2">
+            <div class="row justify-content-md-center" style="font-size: 15px" >
+                <div class="col-sm-4 p-0">
+                    <img border="0" src="{% static 'img/dgtu.png' %}" width="60">
+                    <b>ДГТУ</b>
+                    <i>(Ростов-на-Дону)</i>
+                </div>
+                <div class="col-sm-4 mt-4" style="font-size: 17px">
+                    <b>{{event.result_in}} : {{event.result_out}}</b>
+                </div>
+                <div class="col-sm-4 p-0">
+                    <img border="0" src="{{event.photo_in.url}}" width="60">
+                    <b>{{event.comanda_in}}</b>
+                    <i>{{event.city_in}}</i>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+

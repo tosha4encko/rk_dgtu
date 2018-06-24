@@ -1,0 +1,17 @@
+{% if news %}
+    {% for new in news %}
+        <div class="card rounded-0 px-3 py-2" style="background: #ddeffe">
+            <h2 class="card-title" style="font-weight: bold;"> {{new.title}}</h2>
+            <h6 class="card-subtitle mb-2 text-muted">{{new.pub_date}}</h6>
+            <img class="card-img-top" src="{{new.photo.url}}" alt="Card image cap">
+            {% for paragraph in new.paragraph_set.all %}
+                <p class="card-text" align="justify" style="font-size: 20px; text-indent: 30px; margin: 0;">
+                    {{ paragraph.text }}
+                </p>
+            {% endfor %}
+            <a href="{{new.source}}" style="font-size:15px;">Источник: {{new.source}}</a>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>No news are available.</p>
+    {% endif %}

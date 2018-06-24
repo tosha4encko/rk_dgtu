@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import News, Event, Pararaph, Albom, Photo
+from .models import News, Event, Paragraph, Albom, Photo
 
 class ParagraphInline(admin.TabularInline):
-    model = Pararaph
+    model = Paragraph
     extra = 1
     verbose_name_plural = 'Абзыцы'
 
