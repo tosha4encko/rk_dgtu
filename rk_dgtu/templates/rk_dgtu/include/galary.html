@@ -1,13 +1,18 @@
 <!doctype html>
 {% load staticfiles %}
+{% for albom in alboms %}
+<div class="col-lg-3 mx-4">
+	<a href="{{albom.id}}/" style="text-decoration: none;">
+		<div class="card" style="background-color: transparent; border: 0px; color: #ddeffe;">
+			<h6 class="card-title mt-2">
+				{{ albom.title }}
+			</h6>
 
-            <div class="photo_content">
-				<span class="photo1">
-					<h2> {{albom.title}} </h2>
-					<a href="/test/galary/{{ albom.id }}/">
-						<img  border="0" src="content\7_13_17\photo\1.jpg" width="250" height="200">
-					</a>
-					<h3 class="data"> {{albom.data_published}} </h3>
-				</span>
-			</div>
+			<img class="card-img" border="0" src="{{ albom.photo_set.all.0.photo.url }}" width="250" height="200">
 
+			<h6 class="card-subtitle mb-2 text-muted mt-1"> {{albom.real_data}}</h6>
+		</div>
+	</a>
+</div>
+{% endfor %}
+</div>

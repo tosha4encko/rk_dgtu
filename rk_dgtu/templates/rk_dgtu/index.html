@@ -50,18 +50,26 @@
             </div>
         </nav>
 
-        <div class="container my-5">
-            <div class="row justify-content-md-center">
-                <div class="col-lg-8 ">
-                    {% include 'rk_dgtu/include/news.html' %}
-                </div>
-                <div class="col-lg-3">
-                    {% include 'rk_dgtu/include/events.html' %}
-                </div>
+        <div class="container my-0">
+            <div class="row justify-content-md-center ">
+                {% if news %}
+                    <div class="col-lg-8  py-5">
+                        {% include 'rk_dgtu/include/news.html' %}
+                    </div>
+                    <div class="col-lg-3">
+                        {% include 'rk_dgtu/include/events.html' %}
+                    </div>
+                {% endif %}
+
+                {% if alboms %}
+                    {% include 'rk_dgtu/include/galary.html' %}
+                {% endif %}
+
+                {% if photo %}
+                    {% include 'rk_dgtu/include/albom.html' %}
+                {% endif %}
             </div>
         </div>
-
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

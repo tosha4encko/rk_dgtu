@@ -3,7 +3,7 @@ from django.db import models
 import datetime
 
 class News(models.Model):
-    pub_date = models.DateTimeField(verbose_name='date published')
+    pub_date = models.DateField(verbose_name='date published')
 
     real_data = models.CharField(max_length=50)
     title = models.CharField(max_length=100)
@@ -15,7 +15,7 @@ class Paragraph(models.Model):
     news = models.ForeignKey(News, on_delete=models.PROTECT)
 
 class Event(models.Model):
-    pub_date = models.DateTimeField(verbose_name='date published')
+    pub_date = models.DateField(verbose_name='date published')
 
     real_data = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
@@ -32,8 +32,7 @@ class Event(models.Model):
 
 
 class Albom(models.Model):
-    pub_date = models.DateTimeField(verbose_name='date published')
-
+    pub_date = models.DateField(verbose_name='date published')
     title = models.CharField(max_length=100)
     real_data = models.CharField(max_length=50)
 
