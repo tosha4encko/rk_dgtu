@@ -2,7 +2,7 @@
 from django.db import models
 import datetime
 
-class News(models.Model):
+class New(models.Model):
     pub_date = models.DateField(verbose_name='date published')
 
     real_data = models.CharField(max_length=50)
@@ -12,7 +12,7 @@ class News(models.Model):
 
 class Paragraph(models.Model):
     text = models.CharField(max_length=8000)
-    news = models.ForeignKey(News, on_delete=models.PROTECT)
+    news = models.ForeignKey(New, on_delete=models.PROTECT)
 
 class Event(models.Model):
     pub_date = models.DateField(verbose_name='date published')
@@ -39,3 +39,7 @@ class Albom(models.Model):
 class Photo(models.Model):
     photo = models.ImageField(upload_to='images')
     albom = models.ForeignKey(Albom, on_delete=models.PROTECT)
+
+class Video(models.Model):
+    video = models.CharField(max_length=1000)
+    new = models.ForeignKey(New, on_delete=models.PROTECT, blank=True)

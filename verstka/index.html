@@ -13,82 +13,252 @@
     </head>
     <body>
         <header class="header mx-auto text-center">
-            <img border="0" src="img/dgtu.png" width="70">
-            РК ДГТУ
+            <!-- <img border="0" src="img/dgtu.png" width="70"> -->
+            Регби-Ростов
         </header>
+
+
+
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expended="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
             <div class="collapse navbar-collapse mb-2" id="navbarSupportedContent">
                 <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="nav-item col-lg-3" >
-                            <a class="nav-link " href="index.html">Новости</a>
-                        </div>
+                    <nav class="row justify-content-md-center  text-center">
+                        <nav class="nav-item col-lg-2"  style="font-size=5px;">
+                          <a class="nav-link" href="index.html">Home</a>
+                        </nav>
 
-                        <div class="nav-item col-lg-3">
-                            <a class="nav-link" href="galary.html">Галерея</a>
-                        </div>
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="index.html">История</a>
+                        </nav>
 
-                        <div class="nav-item dropdown col-lg-3">
-                            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
-                                Команда
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="index.html">Игроки</a>
+                        </nav>
+
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="index.html">Новости</a>
+                        </nav>
+
+                        <nav class="nav-item col-lg-2">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
+                                Галерея
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">О клубе</a>
-                                <a class="dropdown-item" href="#">Состав</a>
-                                <a class="dropdown-item" href="#">Тренерский штаб</a>
-                            </div>
-                        </div>
-                    </div>
+                            <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="galary.html">Фото</a>
+                                <a class="dropdown-item" href="#">Видео</a>
+                            </nav>
+                        </nav>
+
+                        <nav class="nav-item dropdown col-lg-2">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
+                                Клубы
+                            </a>
+                            <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">ДГТУ</a>
+                                <a class="dropdown-item" href="#">Дон</a>
+                            </nav>
+                        </nav>
+                    </nav>
                 </div>
             </div>
         </nav>
 
-
-
         <div class="container my-5">
             <div class="row justify-content-md-center">
-                <div class="col-lg-8 ">
-                      <div class="card rounded-0 px-3 py-2" style="background: #ddeffe">
-                        <h2 class="card-title" style="font-weight: bold;">ДГТУ попил крови у «Булавы»</h2>
-                        <h6 class="card-subtitle mb-2 text-muted">01 Июля 2017</h6>
-                        <img class="card-img-top" src="img\bd.jpg" alt="Card image cap">
-                        <p class="card-text">
-                             &nbsp &nbsp &nbspВо встрече дивизион «Б» Премьер-лиги таганрогская «Булава» на выезде с бонусом обыграларостовский ДГТУ.
-                         </p>
-                        <a href="https://rugger.info/news/15049" style="font-size:15px;">Источник: https://rugger.info/news/15049</a>
-                      </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card rounded-0 text-center p-0" style="background: #ccc;">
-                        <h4 class="card-header" style="font-weight: bold; background: #aaa;">Последний матч</h4>
-                        <h6 class="card-title mt-2">
-                            1 июля 2017<br/>
-                            Таганрог. Стадион "Радуга"<br/>
-                            <b>Чемпионат России 2017</b><br/>
-                        </h6>
-                        <div class="container my-6 pb-2">
-                            <div class="row justify-content-md-center" style="font-size: 15px">
-                                <div class="col-sm-4">
-                                    <img border="0" src="img/dgtu.png" width="60">
-                                    <b>ДГТУ</b>
-                                    <i>(Ростов-на-Дону)</i>
+                <div class="col-lg-8">
+                    <div id="carouselExampleIndicators" class="carousel slide pb-3" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li class="active" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li  data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active text-center">
+                                <a style="text-decoration:none; color: #ddeffe;" href="#">
+                                    <img src="img/1.jpg" width="750px" height="500px"/>
+                                    <h3 style="margin-top: -50px;"> ДГТУ - Булава </h3>
+                                </a>
+                            </div>
+                            <div class="carousel-item  text-center">
+                                <a style="text-decoration:none; color: #ddeffe;" href="#">
+                                    <img src="img/3.jpg" width="750px" height="500px"/>
+                                    <h3 style="margin-top: -50px;"> ДГТУ - Булава </h3>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#carouselExampleIndicators" class="carousel-control-prev" role="buttom" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#carouselExampleIndicators" class="carousel-control-next" role="buttom" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                     </div>
+
+                     <!-- <div class="card-group"> -->
+                     <div class="container-fluid">
+                         <div class="row "  style="margin-right: -72px">
+                             <div class="col-lg-5"  style="margin-right: -29px; margin-left: -14px">
+                                 <div class="card rounded-0 px-1 py-3" style="height: 220px; background: #ddeffe">
+                                     <h6 class="card-subtitle mb-2 text-muted">01 Июля 2017</h6>
+                                     <img class="card-img-top" src="img\bd.jpg" alt="Card image cap">
+                                 </div>
+                             </div>
+                             <div class="col-lg-7 ">
+                                 <div class="card rounded-0 px-1 pt-2" style="height: 220px; background: #ddeffe">
+                                     <a text-decoration: none; href="news.html">
+                                         <h2 class="card-title" style="font-weight: bold; font-size:20px; color: #000;">ДГТУ попил крови у «Булавы»</h2>
+                                     </a>
+                                     <p class="card-text" style="font-size:17px; height: 130px;">
+                                         &nbsp &nbsp &nbspВо встрече дивизион «Б» Премьер-лиги таганрогская «Булава» на выезде с бонусом обыграларостовский ДГТУ.
+                                     </p>
+                                     <a class="card-link " href="https://rugger.info/news/15049" style="font-size:15px;">Источник: https://rugger.info/news/15049</a>
+                                 </div>
+                             </div>
+                        </div>
+
+                        <div class="row "  style="margin-right: -72px">
+                            <div class="col-lg-5"  style="margin-right: -29px; margin-left: -14px">
+                                <div class="card rounded-0 px-1 py-3" style="height: 220px; background: #ddeffe">
+                                    <h6 class="card-subtitle mb-2 text-muted">01 Июля 2017</h6>
+                                    <img class="card-img-top" src="img\bd.jpg" alt="Card image cap">
                                 </div>
-                                <div class="col-sm-3 mt-4" style="font-size: 13px">
-                                    <b>16:37</b>
+                            </div>
+                            <div class="col-lg-7 ">
+                                <div class="card rounded-0 px-1 pt-2" style="height: 220px; background: #ddeffe">
+                                    <a text-decoration: none; href="news.html">
+                                        <h2 class="card-title" style="font-weight: bold; font-size:20px; color: #000;">ДГТУ попил крови у «Булавы»</h2>
+                                    </a>
+                                    <p class="card-text" style="font-size:17px; height: 130px;">
+                                        &nbsp &nbsp &nbspВо встрече дивизион «Б» Премьер-лиги таганрогская «Булава» на выезде с бонусом обыграларостовский ДГТУ.
+                                    </p>
+                                    <a class="card-link " href="https://rugger.info/news/15049" style="font-size:15px;">Источник: https://rugger.info/news/15049</a>
                                 </div>
-                                <div class="col-sm-4">
-                                    <img border="0" src="img/bulava.png" width="60">
-                                    <b>Булава</b>
-                                    <i>(Таганрог)</i>
+                            </div>
+                       </div>
+
+                       <div class="row "  style="margin-right: -72px">
+                           <div class="col-lg-5"  style="margin-right: -29px; margin-left: -14px">
+                               <div class="card rounded-0 px-1 py-3" style="height: 220px; background: #ddeffe">
+                                   <h6 class="card-subtitle mb-2 text-muted">01 Июля 2017</h6>
+                                   <img class="card-img-top" src="img\bd.jpg" alt="Card image cap">
+                               </div>
+                           </div>
+                           <div class="col-lg-7 ">
+                               <div class="card rounded-0 px-1 pt-2" style="height: 220px; background: #ddeffe">
+                                   <a href="news.html">
+                                       <h2 class="card-title" style="font-weight: bold; font-size:20px; color: #000;">ДГТУ попил крови у «Булавы»</h2>
+                                   </a>
+                                   <p class="card-text" style="font-size:17px; height: 130px;">
+                                       &nbsp &nbsp &nbspВо встрече дивизион «Б» Премьер-лиги таганрогская «Булава» на выезде с бонусом обыграларостовский ДГТУ.
+                                   </p>
+                                   <a class="card-link " href="https://rugger.info/news/15049" style="font-size:15px;">Источник: https://rugger.info/news/15049</a>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="row  text-center mt-3 p-3" style="background: #ddeffe">
+                                <div class="col-lg-6">
+                                    <iframe width="300" height="250"
+                                    src="https://www.youtube.com/embed/XTgzRbhJy4c"
+                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe width="300" height="250"
+                                    src="https://www.youtube.com/embed/XTgzRbhJy4c"
+                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <iframe width="300" height="250"
+                                    src="https://www.youtube.com/embed/XTgzRbhJy4c"
+                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <iframe width="300" height="250"
+                                    src="https://www.youtube.com/embed/XTgzRbhJy4c"
+                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                <div class="col-lg-3"><div class="card rounded-0 text-center p-0  mb-3" style="background: #ccc;">
+                    <h4 class="card-header" style="font-weight: bold; background: #aaa;">Ближайший матч</h4>
+                    <h6 class="card-title mt-2">
+                        1 июля 2017<br/>
+                        Таганрог. Стадион "Радуга"<br/>
+                        <b>Чемпионат России 2017</b><br/>
+                    </h6>
+                    <div class="container my-6 pb-2">
+                        <div class="row justify-content-md-center" style="font-size: 15px">
+                            <div class="col-sm-4">
+                                <img border="0" src="img/dgtu.png" width="60">
+                                <b>ДГТУ</b>
+                                <i>(Ростов-на-Дону)</i>
+                            </div>
+                            <div class="col-sm-3 mt-4" style="font-size: 13px">
+                                <b>16:37</b>
+                            </div>
+                            <div class="col-sm-4">
+                                <img border="0" src="img/bulava.png" width="60">
+                                <b>Булава</b>
+                                <i>(Таганрог)</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card rounded-0 text-center p-0   mb-3" style="background: #ccc;">
+                    <h4 class="card-header" style="font-weight: bold; background: #aaa;">Последний матч</h4>
+                    <h6 class="card-title mt-2">
+                        1 июля 2017<br/>
+                        Таганрог. Стадион "Радуга"<br/>
+                        <b>Чемпионат России 2017</b><br/>
+                    </h6>
+                    <div class="container my-6 pb-2">
+                        <div class="row justify-content-md-center" style="font-size: 15px">
+                            <div class="col-sm-4">
+                                <img border="0" src="img/dgtu.png" width="60">
+                                <b>ДГТУ</b>
+                                <i>(Ростов-на-Дону)</i>
+                            </div>
+                            <div class="col-sm-3 mt-4" style="font-size: 13px">
+                                <b>16:37</b>
+                            </div>
+                            <div class="col-sm-4">
+                                <img border="0" src="img/bulava.png" width="60">
+                                <b>Булава</b>
+                                <i>(Таганрог)</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-0 text-center p-0   mb-3" style="background: #ccc;">
+                    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?156"></script>
+                        <!-- VK Widget -->
+                        <div id="vk_groups"></div>
+                        <script type="text/javascript">
+                        VK.Widgets.Group("vk_groups", {mode: 0, width: "255", color1: 'ccc', color2: '000', color3: '000'}, 20003922);
+                    </script>
+                </div>
+
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="255" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media">
+                </iframe>
                 </div>
             </div>
         </div>

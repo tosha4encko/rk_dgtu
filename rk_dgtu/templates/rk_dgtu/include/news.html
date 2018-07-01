@@ -1,17 +1,25 @@
 {% if news %}
     {% for new in news %}
-        <div class="card rounded-0 py-2" style="border: 0; background: #ddeffe">
-            <h2 class="card-title mx-3" style="font-weight: bold;"> {{new.title}}</h2>
-            <h6 class="card-subtitle mb-2 text-muted mx-3">{{new.real_data}}</h6>
-            <img class="card-img-top" src="{{new.photo.url}}" alt="Card image cap">
-            {% for paragraph in new.paragraph_set.all %}
-                <p class="card-text  mx-3" align="justify" style="font-size: 20px; text-indent: 30px; margin: 0;">
-                    {{ paragraph.text }}
-                </p>
-            {% endfor %}
-            <a class="mt-4 mx-3" href="{{new.source}}" style="font-size:15px;">Источник: {{new.source}}</a>
+        <div class="row mb-3"  style="margin-right: -72px;">
+            <div class="col-lg-5"  style="margin-right: -29px; margin-left: -14px">
+                <div class="card rounded-0 px-1 py-3" style="height: 220px; background: #ddeffe">
+                    <h6 class="card-subtitle mb-2 text-muted">{{new.real_data}}</h6>
+                    <img class="card-img-top" src="{{new.photo.url}}" alt="Card image cap" height="180px">
+                </div>
+            </div>
+            <div class="col-lg-7 ">
+                <div class="card rounded-0 px-1 pt-2" style="height: 220px; background: #ddeffe">
+                    <a style="text-decoration: none;" align="justify" href="/rk_dgtu/news/{{new.id}}/">
+                        <h2 class="card-title" style="font-weight: bold; font-size:20px; color: #000;">{{new.title}}</h2>
+                    </a>
+                    <p class="card-text" style="font-size:17px; height: 130px; text-indent: 30px;">
+                        {{ new.paragraph_set.all.0.text }}
+                    </p>
+                    <a class="card-link " href=" {{new.source}}" style="font-size:15px;">Источник:  {{new.source}}</a>
+                </div>
+            </div>
         </div>
     {% endfor %}
-    {% else %}
-        <p>No news are available.</p>
-    {% endif %}
+{% else %}
+    <p>No news are available.</p>
+{% endif %}

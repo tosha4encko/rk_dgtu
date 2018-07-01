@@ -1,5 +1,5 @@
 {% load static %}
-<div class="row sticky-top py-5">
+<div class="row py-5 ml-1">
     {% for event in events %}
          <div class="card rounded-0 text-center mb-4" style="background: #ccc;">
              {% now "Y-m-d" as todays_date %}
@@ -32,4 +32,17 @@
             </div>
         </div>
     {% endfor %}
+    <div class="rounded-0 text-center p-0   mb-3" style="background: #ccc;">
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?156"></script>
+        <!-- VK Widget -->
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+        VK.Widgets.Group("vk_groups", {mode: 0, width: "265", color1: 'ccc', color2: '000', color3: '000'}, 20003922);
+        </script>
+    </div>
+
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="265" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowTransparency="true" allow="encrypted-media">
+    </iframe>
 </div>

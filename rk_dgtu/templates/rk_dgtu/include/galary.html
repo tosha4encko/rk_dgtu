@@ -1,18 +1,30 @@
 <!doctype html>
-{% load staticfiles %}
-{% for albom in alboms %}
-<div class="col-lg-3 mx-4">
-	<a href="{{albom.id}}/" style="text-decoration: none;">
-		<div class="card" style="background-color: transparent; border: 0px; color: #ddeffe;">
-			<h6 class="card-title mt-2">
-				{{ albom.title }}
-			</h6>
-
-			<img class="card-img" border="0" src="{{ albom.photo_set.all.0.photo.url }}" width="250" height="200">
-
-			<h6 class="card-subtitle mb-2 text-muted mt-1"> {{albom.real_data}}</h6>
+<div class="container">
+	<div class="row justify-content-md-center">
+		{% if alboms %}
+		{% for albom in alboms %}
+		<div class="col-lg-5 ml-5">
+			<a href="{{albom.id}}/" style="text-decoration: none;">
+				<div class="card" style="background-color: transparent; border: 0px; color: #ddeffe;">
+					<h6 class="card-title mt-2">
+						{{ albom.title }}
+					</h6>
+					<img class="card-img" border="0" src="{{ albom.photo_set.all.0.photo.url }}" width="250" height="200">
+					<h6 class="card-subtitle mb-2 text-muted mt-1"> {{albom.real_data}}</h6>
+				</div>
+			</a>
 		</div>
-	</a>
-</div>
-{% endfor %}
+		{% endfor %}
+		{% endif %}
+		{% if videos %}
+			{% for v in videos %}
+
+		<div class="col-lg-5">
+			{% autoescape off %}
+			{{ v.video }}
+			{% endautoescape %}
+		</div>
+			{% endfor %}
+		{% endif %}
+	</div>
 </div>

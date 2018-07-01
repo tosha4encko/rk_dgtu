@@ -1,0 +1,33 @@
+<div id="carouselExampleIndicators" class="carousel slide pb-3" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+        <li  data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li  data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li  data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li  data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+            <a style="text-decoration:none; color: #ddeffe;" href="#">
+                <img src="{{active_albom.photo_set.all.0.photo.url}}" width="750px" height="500px"/>
+                <h3 style="margin-top: -50px;"> {{active_albom.photo_set.all.0.photo.title}} </h3>
+            </a>
+        </div>
+        {% for albom in alboms %}
+        <div class="carousel-item text-center">
+            <a style="text-decoration:none; color: #ddeffe;" href="#">
+                <img src="{{albom.photo_set.all.0.photo.url}}" width="750px" height="500px"/>
+                <h3 style="margin-top: -50px;"> {{albom.photo_set.all.0.photo.title}} </h3>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="#carouselExampleIndicators" class="carousel-control-prev" role="buttom" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a href="#carouselExampleIndicators" class="carousel-control-next" role="buttom" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

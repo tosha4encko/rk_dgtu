@@ -5,7 +5,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^rk_dgtu/', include('rk_dgtu.urls')),
+    url(r'^regby-rostov/', include('rk_dgtu.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 if settings.DEBUG:

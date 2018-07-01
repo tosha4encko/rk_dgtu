@@ -15,59 +15,87 @@
     </head>
     <body>
         <header class="header mx-auto text-center">
-                <img border="0" src= "{% static 'img/dgtu.png' %} " width="70">
-            РК ДГТУ
+            <!-- <img border="0" src="img/dgtu.png" width="70"> -->
+            Регби-Ростов
         </header>
+
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expended="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
             <div class="collapse navbar-collapse mb-2" id="navbarSupportedContent">
                 <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="nav-item col-lg-3" >
-                            <a class="nav-link " href="/rk_dgtu/news/">Новости</a>
-                        </div>
+                    <nav class="row justify-content-md-center  text-center">
+                        <nav class="nav-item col-lg-2"  style="font-size=5px;">
+                          <a class="nav-link" href="/regby-rostov/">Home</a>
+                        </nav>
 
-                        <div class="nav-item col-lg-3">
-                            <a class="nav-link" href="/rk_dgtu/galary/">Галерея</a>
-                        </div>
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="/regby-rostov/">История</a>
+                        </nav>
 
-                        <div class="nav-item dropdown col-lg-3">
-                            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
-                                Команда
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="/regby-rostov/">Игроки</a>
+                        </nav>
+
+                        <nav class="nav-item col-lg-2" >
+                            <a class="nav-link" href="/regby-rostov/news/">Новости</a>
+                        </nav>
+
+                        <nav class="nav-item col-lg-2">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
+                                Галерея
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">О клубе</a>
-                                <a class="dropdown-item" href="#">Состав</a>
-                                <a class="dropdown-item" href="#">Тренерский штаб</a>
-                            </div>
-                        </div>
-                    </div>
+                            <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/regby-rostov/galary/photo/">Фото</a>
+                                <a class="dropdown-item" href="/regby-rostov/galary/video/">Видео</a>
+                            </nav>
+                        </nav>
+
+                        <nav class="nav-item dropdown col-lg-2">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"?>
+                                Клубы
+                            </a>
+                            <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/regby-rostov/">ДГТУ</a>
+                                <a class="dropdown-item" href="/regby-rostov/">Дон</a>
+                            </nav>
+                        </nav>
+                    </nav>
                 </div>
             </div>
         </nav>
 
         <div class="container my-0">
             <div class="row justify-content-md-center ">
-                {% if news %}
-                    <div class="col-lg-8  py-5">
-                        {% include 'rk_dgtu/include/news.html' %}
-                    </div>
-                    <div class="col-lg-3">
-                        {% include 'rk_dgtu/include/events.html' %}
-                    </div>
-                {% endif %}
+                <div class="col-lg-8  py-5">
+                    {% if news and alboms %}
+                        {% include 'rk_dgtu/include/home.html' %}
+                    {% else %}
 
-                {% if alboms %}
-                    {% include 'rk_dgtu/include/galary.html' %}
-                {% endif %}
+                        {% if news %}
+                            {% include 'rk_dgtu/include/news.html' %}
+                        {% endif %}
 
-                {% if photo %}
-                    {% include 'rk_dgtu/include/albom.html' %}
-                {% endif %}
+                        {% if new %}
+                            {% include 'rk_dgtu/include/new.html' %}
+                        {% endif %}
+
+                        {% if alboms or videos%}
+                            {% include 'rk_dgtu/include/galary.html' %}
+                        {% endif %}
+
+                        {% if photo %}
+                            {% include 'rk_dgtu/include/albom.html' %}
+                        {% endif %}
+                    {% endif %}
+                </div>
+                <div class="col-lg-3">
+                    {% include 'rk_dgtu/include/events.html' %}
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
