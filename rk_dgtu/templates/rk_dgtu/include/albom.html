@@ -1,11 +1,12 @@
-<!doctype html>
-{% load staticfiles %}
-{% for p in photo %}
-<div class="col-lg-2 my-2">
-	<a href="{{ p.photo.url }}">
-		<img class="card-img" border="0" src="{{ p.photo.url }}"
-			 width="150" height="100">
-	</a>
-</div>
-{% endfor %}
+<div class="container">
+	<div class="row justify-content-md-center">
+		{% for p in photo %}
+		<div class="col-lg-5 my-2">
+			<a href="{{ p.photo.url }}">
+				<img class="card-img" border="0" src="{{ p.photo.url }}"
+				 width="300" height="200">
+			</a>
+		</div>
+		{% endfor %}
+	</div>
 </div>

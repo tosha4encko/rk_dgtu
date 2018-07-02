@@ -36,10 +36,12 @@ class Albom(models.Model):
     title = models.CharField(max_length=100)
     real_data = models.CharField(max_length=50)
 
+    new = models.ForeignKey(New, on_delete=models.PROTECT, blank=True, null=True)
+
 class Photo(models.Model):
     photo = models.ImageField(upload_to='images')
     albom = models.ForeignKey(Albom, on_delete=models.PROTECT)
 
 class Video(models.Model):
     video = models.CharField(max_length=1000)
-    new = models.ForeignKey(New, on_delete=models.PROTECT, blank=True)
+    new = models.ForeignKey(New, on_delete=models.PROTECT, blank=True, null=True)

@@ -11,8 +11,13 @@ class VideoInline(admin.TabularInline):
     extra = 1
     verbose_name_plural = 'Видео'
 
+class AlbomInline(admin.TabularInline):
+    model = Albom
+    extra = 1
+    verbose_name_plural = 'Альбом'
+
 class ProposalSourceAdmin(admin.ModelAdmin):
-    inlines = (ParagraphInline, VideoInline)
+    inlines = (ParagraphInline, VideoInline, AlbomInline)
 
 class PhotoInline(admin.TabularInline):
     model = Photo

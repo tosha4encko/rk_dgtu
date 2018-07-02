@@ -8,16 +8,16 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active text-center">
-            <a style="text-decoration:none; color: #ddeffe;" href="#">
+            <a style="text-decoration:none; color: #ddeffe;" href="/regby-rostov/galary/photo/{{active_albom.id}}/">
                 <img src="{{active_albom.photo_set.all.0.photo.url}}" width="750px" height="500px"/>
-                <h3 style="margin-top: -50px;"> {{active_albom.photo_set.all.0.photo.title}} </h3>
+                <h3 style="margin-top: -50px;"> {{active_albom.title}} </h3>
             </a>
         </div>
-        {% for albom in alboms %}
+        {% for albom in h_alboms %}
         <div class="carousel-item text-center">
-            <a style="text-decoration:none; color: #ddeffe;" href="#">
+            <a style="text-decoration:none; color: #ddeffe;" href="/regby-rostov/galary/photo/{{albom.id}}/">
                 <img src="{{albom.photo_set.all.0.photo.url}}" width="750px" height="500px"/>
-                <h3 style="margin-top: -50px;"> {{albom.photo_set.all.0.photo.title}} </h3>
+                <h3 style="margin-top: -50px;"> {{albom.title}} </h3>
             </a>
         </div>
         {% endfor %}

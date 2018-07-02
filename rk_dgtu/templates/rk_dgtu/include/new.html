@@ -10,3 +10,59 @@
     <a class="mt-4 mx-3" href="{{new.source}}" style="font-size:15px;">Источник: {{new.source}}</a>
 </div>
 
+{% if new.albom_set %}
+<div class="conteiner mb-3" style="background: #ddeffe">
+    <div class="row text-center">
+        <div class="col-lg-9">
+            фото
+        </div>
+    </div>
+    <div class="row justify-content-md-center px-3 py-2">
+        <div class="col-lg-3">
+            <a href="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}">
+                <img class="card-img" border="0" src="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}" width="200" height="150">
+            </a>
+        </div>
+        <div class="col-lg-3">
+            <a href="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}">
+                <img class="card-img" border="0" src="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}" width="200" height="150">
+            </a>
+        </div>
+        <div class="col-lg-3">
+            <a href="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}">
+                <img class="card-img" border="0" src="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}"  width="200" height="150">
+            </a>
+        </div>
+        <div class="col-lg-3" style="border-left: 4px double black; margin-top: -30px;">
+			<a href="/regby-rostov/galary/photo/{{new.albom_set.all.0.id}}/" style="text-decoration: none;">
+				<div class="card" style="background-color: transparent; border: 0px; color: #000;">
+					<h6 class="card-title mt-2 text-center">
+						Больше фото
+					</h6>
+					<img class="card-img" border="0" src="{{ new.albom_set.all.0.photo_set.all.0.photo.url }}" width="180" height="130">
+                </div>
+			</a>
+		</div>
+    </div>
+</div>
+{% endif %}
+
+{% if new.video_set %}
+<div class="conteiner mb-3" style="background: #ddeffe">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            Видео
+        </div>
+    </div>
+    <div class="row justify-content-md-center px-3 py-2">
+        {% for v in new.video_set.all %}
+        <div class="col-lg-6 text-center p-2" style="border: 1px solid #000">
+			{% autoescape off %}
+			{{ v.video }}
+			{% endautoescape %}
+		</div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+

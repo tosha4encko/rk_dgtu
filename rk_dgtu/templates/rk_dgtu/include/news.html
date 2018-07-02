@@ -1,7 +1,7 @@
 {% if news %}
     {% for new in news %}
-        <div class="row mb-3"  style="margin-right: -72px;">
-            <div class="col-lg-5"  style="margin-right: -29px; margin-left: -14px">
+        <div class="row mb-3"  style="margin-right: -44px;">
+            <div class="col-lg-5"  style="margin-right: -29px;">
                 <div class="card rounded-0 px-1 py-3" style="height: 220px; background: #ddeffe">
                     <h6 class="card-subtitle mb-2 text-muted">{{new.real_data}}</h6>
                     <img class="card-img-top" src="{{new.photo.url}}" alt="Card image cap" height="180px">
@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-7 ">
                 <div class="card rounded-0 px-1 pt-2" style="height: 220px; background: #ddeffe">
-                    <a style="text-decoration: none;" align="justify" href="/rk_dgtu/news/{{new.id}}/">
+                    <a style="text-decoration: none;" align="justify" href="/regby-rostov/news/{{new.id}}/">
                         <h2 class="card-title" style="font-weight: bold; font-size:20px; color: #000;">{{new.title}}</h2>
                     </a>
                     <p class="card-text" style="font-size:17px; height: 130px; text-indent: 30px;">

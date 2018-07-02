@@ -30,7 +30,7 @@
                 <div class="container">
                     <nav class="row justify-content-md-center  text-center">
                         <nav class="nav-item col-lg-2"  style="font-size=5px;">
-                          <a class="nav-link" href="/regby-rostov/">Home</a>
+                          <a class="nav-link" href="/regby-rostov/">Главная</a>
                         </nav>
 
                         <nav class="nav-item col-lg-2" >
@@ -60,7 +60,7 @@
                                 Клубы
                             </a>
                             <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/regby-rostov/">ДГТУ</a>
+                                <a class="dropdown-item" href="/regby-rostov/club/dgtu/">ДГТУ</a>
                                 <a class="dropdown-item" href="/regby-rostov/">Дон</a>
                             </nav>
                         </nav>
@@ -72,8 +72,25 @@
         <div class="container my-0">
             <div class="row justify-content-md-center ">
                 <div class="col-lg-8  py-5">
-                    {% if news and alboms %}
+                    {% if h_alboms %}
                         {% include 'rk_dgtu/include/home.html' %}
+                        <div class="my-2" style="background: #ddeffe">
+                            <div class="row text-center">
+                                <div class="col-lg-12 py-1">
+                                    Новости
+                                </div>
+                            </div>
+                            {% include 'rk_dgtu/include/news.html' %}
+                        </div>
+
+                        <div class="py-2" style="background: #ddeffe">
+                            <div class="row text-center">
+                                <div class="col-lg-12 py-1">
+                                    Видео
+                                </div>
+                            </div>
+                            {% include 'rk_dgtu/include/galary.html' %}
+                        </div>
                     {% else %}
 
                         {% if news %}
@@ -90,6 +107,10 @@
 
                         {% if photo %}
                             {% include 'rk_dgtu/include/albom.html' %}
+                        {% endif %}
+
+                        {% if club %}
+                            {% include 'rk_dgtu/include/club_dgtu.html' %}
                         {% endif %}
                     {% endif %}
                 </div>
